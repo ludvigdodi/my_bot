@@ -1,0 +1,5 @@
+#system directory
+__pycache__/
+
+#file with token
+bot_token
