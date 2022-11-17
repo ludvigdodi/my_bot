@@ -24,16 +24,16 @@ pip install -r requirements.txt
 
 ```sh
 Windows:
-python bloodhound_bot.py
+python app.py
 ```
 
 ```sh
 MacOS:
-python bloodhound_bot.py
+python app.py
 ```
 ```sh
 Linux:
-python bloodhound_bot.py
+python app.py
 ```
 
 
