@@ -14,6 +14,9 @@ The principle of interaction with it is very simple: for the word you enter, it 
 ```sh
 pip install pipenv
 pipenv sync
+
+or
+pip install -r requirements.txt
 ```
 
 
