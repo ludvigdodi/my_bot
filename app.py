@@ -1,9 +1,12 @@
 import requests
 from bot_token import token
+from users import user
 from searching_script import fill_matched_sentences, create_result_message
+
 ok_codes = 200, 201, 202, 203, 204
 
-user = {"username": "Ludvig", "level": 1}
+# user = {"username": "Ludvig", "level": 1}
+
 
 class Bot:
     root_url = "https://api.telegram.org/bot"
