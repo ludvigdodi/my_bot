@@ -2,4 +2,4 @@
 __pycache__/
 
 #file with token
-bot_token
+bot_token.py
