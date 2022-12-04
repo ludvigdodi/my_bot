@@ -15,6 +15,9 @@ The principle of interaction with it is very simple: for the word you enter, it 
 pip install -r requirements.txt
 ```
 
+```sh
+Create bot_token.py file with 'token' variabel or paste your token to 'token' in app.py file (7 row)
+```
 
 - go to the terminal (Linux or MacOS) or powershell if you are on Windows and enter the command
 
