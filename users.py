@@ -5,12 +5,19 @@ users = [
     {"username": "Sam", "level": 1},
 ]
 
-# user_name = input("Enter your name ")
-# language_level = input(f"Hello {user_name}! \nWhat is your language level?")
+user_name = input("What is your name?  ")
+language_level = input("What is your language level?")
+new_user = {"username": user_name, "level": language_level}
+users.append(new_user)
 
-# user = {"username": user_name, "level": language_level}
-# users.append(user)
 
-# print(users)
+def user_out():
+    for user in users:
+        if user == new_user:
+            break
+    return user
 
-user = {"username": "Ludvig", "level": 1}
+
+user_out()
+
+# user = {"username": "Ludvig", "level": 1}

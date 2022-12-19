@@ -1,4 +1,5 @@
 import requests
+import os
 from bot_token import token
 
 # from users import user
@@ -19,6 +20,7 @@ class Bot:
     def get_updates(self):
         url = f"{self.root_url}{self.token}/getUpdates"
         res = requests.get(url)
+
 
         if res.status_code in ok_codes:
             updates = res.json()
@@ -60,3 +62,4 @@ class Bot:
 if __name__ == "__main__":
     bot = Bot(token)
     bot.poolling()
+
