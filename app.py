@@ -1,11 +1,16 @@
 import requests
 import os
-from bot_token import token
 
 # from users import user
 from searching_script import fill_matched_sentences, create_result_message
+from dotenv import load_dotenv
 
-# token = '{TOKEN}'
+load_dotenv()
+
+
+
+TOKEN = os.environ.get("TOKEN")
+
 ok_codes = 200, 201, 202, 203, 204
 
 user = {"username": "Ludvig", "level": 1}
@@ -15,10 +20,10 @@ class Bot:
     root_url = "https://api.telegram.org/bot"
 
     def __init__(self, token=None):
-        self.token = token
+        self.TOKEN = TOKEN
 
     def get_updates(self):
-        url = f"{self.root_url}{self.token}/getUpdates"
+        url = f"{self.root_url}{TOKEN}/getUpdates"
         res = requests.get(url)
 
 
@@ -27,7 +32,7 @@ class Bot:
             return updates
 
     def send_message(self, chat_id, message):
-        url = f"{self.root_url}{self.token}/sendMessage"
+        url = f"{self.root_url}{self.TOKEN}/sendMessage"
         res = requests.post(url, data={"chat_id": chat_id, "text": message})
         if res.status_code in ok_codes:
             return True
@@ -60,6 +65,6 @@ class Bot:
 
 
 if __name__ == "__main__":
-    bot = Bot(token)
+    bot = Bot(TOKEN)
     bot.poolling()
 
